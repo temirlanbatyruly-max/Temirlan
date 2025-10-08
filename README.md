@@ -1,1 +1,1 @@
-# Temirlan
+# batyruly.temirlan

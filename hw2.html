@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Order summary card</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body {
+      background-color: hsl(225, 100%, 94%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      background-color: white;
+      width: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 25px;
+      overflow: hidden;
+    }
+
+    .box2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: hsl(225, 100%, 98%);
+      padding: 15px;
+      border-radius: 15px;
+      width: 350px;
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      width: 50px;
+    }
+
+    button {
+      padding: 15px;
+      width: 350px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 15px;
+      background-color: hsl(245, 75%, 52%);
+      color: white;
+    }
+
+    button:hover {
+      background-color: hsl(245, 75%, 60%);
+      cursor: pointer;
+    }
+
+    .inner-box {
+      display: flex;
+      flex-direction: column;
+      margin-left: 15px;
+    }
+
+    h3:hover {
+      color: hsl(245, 75%, 52%);
+      cursor: pointer;
+    }
+
+    p {
+      text-align: center;
+      line-height: 1.5;
+      color: hsl(224, 23%, 55%);
+      margin: 0 40px 20px 40px;
+    }
+
+    h3 {
+      color: hsl(224, 23%, 55%);
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box box1"></div>
+    <img src="./illustration-hero.svg" />
+    <h1>Order Summary</h1>
+    <p>
+      You can now listen to millions of <br>songs, audiobooks, and podcasts on <br> any
+      device anywhere you like!
+    </p>
+    <div class="box box2">
+      <img src="./icon-music.svg" class="icon" />
+      <div class="box inner-box">
+        <span>Annual Plan</span>
+        <span>$59.99/year</span>
+      </div>
+      <a href="#">Change</a>
+    </div>
+    <button>Proceed to Payment</button>
+    <h3>Cancel Order</h3>
+  </div>
+  </div>
+</body>
+
+</html>

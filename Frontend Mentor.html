@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Single Price Grid Component</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Karla:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: hsl(204, 43%, 93%);
+            font-family: 'Karla';
+        }
+
+        .container {
+            width: 800px;
+            height: 600px;
+            background-color: white;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .top {
+            height: 40%;
+            background-color: white;
+            padding: 40px;
+            text-align: start;
+        }
+
+        .bottom {
+            height: 60%;
+            background-color: beige;
+            display: flex;
+        }
+
+        .left {
+            background-color: hsl(179, 62%, 43%);
+            width: 50%;
+            padding: 40px;
+        }
+
+        .right {
+            background-color: hsla(179, 62%, 43%, 0.715);
+            width: 50%;
+            padding: 40px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px 20px 10px 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: hsl(71, 73%, 54%);
+            color: white;
+        }
+
+        .top h2 {
+            color: hsl(71, 73%, 54%);
+        }
+
+        .min-text {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.468);
+        }
+
+        h4 {
+            font-size: 20px;
+            display: flex;
+            align-items: top;
+            gap: 10px;
+            color: white;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        .left p {
+            color: rgba(255, 255, 255, 0.728);
+            display: flex;
+        }
+
+        .right p {
+            color: rgba(255, 255, 255, 0.728);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            line-height: 1.5;
+        }
+
+        .top p {
+            color: hsl(206, 5%, 75%);
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <h1>Join our community</h1>
+            <h2>30-day, hassle-free money back guarantee</h2>
+            <p>Gain access to our full library of tutorials along with expert code reviews. <br>
+                Perfect for any developers who are serious about honing their skills.</p>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <h2>Monthly Subscription</h2>
+                <h4>&dollar;29 <span class="min-text">per month</span></h4>
+                <p>Full access for less than &dollar;1 a day</p>
+                <button>Sign Up</button>
+            </div>
+            <div class="right">
+                <h2> Why Us</h2>
+                <p>
+                    Tutorials by industry experts
+                    Peer &amp; expert code review
+                    Coding exercises
+                    Access to our GitHub repos
+                    Community forum
+                    Flashcard decks
+                    New videos every week</p>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

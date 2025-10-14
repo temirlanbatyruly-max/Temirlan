@@ -1,0 +1,426 @@
+!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telegram Chat List Clone (Иконки и Аватары-Картинки Flexbox)</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        background-color: #17212b;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        box-sizing: border-box;
+      }
+
+      .screen-emulator {
+        width: 100%;
+        max-width: 400px;
+        background-color: #0e1621;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #17212b;
+        flex-shrink: 0;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: #4a90e2;
+      }
+      .menu-icon {
+        margin-right: 20px;
+        font-size: 22px;
+      }
+
+      .search-icon {
+        margin-right: 0;
+      }
+
+      .app-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffffff;
+      }
+
+      .chat-list-container {
+        flex-grow: 1;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .chat-list-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .chat-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        cursor: pointer;
+        transition: background-color 0.1s;
+      }
+      .chat-item:hover {
+        background-color: #1c2a38;
+      }
+
+      .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffffff;
+
+        background-size: cover;
+        background-position: center;
+      }
+
+      .user-avatar-image {
+        background-color: #ffffff;
+      }
+
+      .chat-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+      .chat-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2px;
+      }
+      .chat-name {
+        font-weight: 600;
+        font-size: 16px;
+        color: #ffffff;
+        flex-shrink: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .chat-time {
+        font-size: 13px;
+        color: #7b8e9d;
+        flex-shrink: 0;
+        margin-left: 10px;
+      }
+      .chat-message {
+        font-size: 14px;
+        color: #7b8e9d;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .chat-status {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        margin-left: 10px;
+      }
+      .unread-count {
+        background-color: #4a90e2;
+        color: white;
+        border-radius: 12px;
+        padding: 2px 7px;
+        font-size: 12px;
+        font-weight: bold;
+        min-width: 12px;
+        text-align: center;
+        margin-top: 5px;
+      }
+      .delivered-icon {
+        color: #4a90e2;
+        font-size: 14px;
+      }
+
+      .bg-pink {
+        background-color: #e91e63;
+      }
+      .bg-red {
+        background-color: #f44336;
+      }
+      .bg-orange {
+        background-color: #ff9800;
+      }
+      .bg-blue {
+        background-color: #2196f3;
+      }
+      .bg-teal {
+        background-color: #009688;
+      }
+      .bg-green {
+        background-color: #4caf50;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="screen-emulator">
+      <div class="header">
+        <div class="header-left">
+          <span class="icon menu-icon">☰</span>
+          <div class="app-title">Telegram</div>
+        </div>
+        <span class="icon search-icon">🔍</span>
+      </div>
+
+      <div class="chat-list-container">
+        <div class="chat-item">
+          <div class="avatar bg-pink">H</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Нұрдаулет</div>
+              <div class="chat-time">19:22</div>
+            </div>
+            <div class="chat-message"></div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar user-avatar-image"></div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Мико 2.0</div>
+              <div class="chat-time">19:22</div>
+            </div>
+            <div class="chat-message"></div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-red">2F</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">2F4 web 25/26</div>
+              <div class="chat-time">15:34</div>
+            </div>
+            <div class="chat-message">Zhansaya: profile-card-component...</div>
+          </div>
+          <div class="chat-status"><span class="unread-count">1</span></div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-blue">BH</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Book hunters</div>
+              <div class="chat-time">09:24</div>
+            </div>
+            <div class="chat-message">
+              Нұрдаулет: Соңғы рет 167 Соңғы бірі...
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-orange">F4</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">F4 BOYS</div>
+              <div class="chat-time">08:13</div>
+            </div>
+            <div class="chat-message">Адилетик Брателло Донателло Рафа...</div>
+          </div>
+        </div>
+        <div class="chat-item">
+          <div class="avatar bg-teal">ji</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">jihcounseling</div>
+              <div class="chat-time">Sat</div>
+            </div>
+            <div class="chat-message"></div>
+          </div>
+          <div class="chat-status"><span class="unread-count">4</span></div>
+        </div>
+        <div class="chat-item">
+          <div class="avatar bg-blue">Б</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Бек</div>
+              <div class="chat-time">Fri</div>
+            </div>
+            <div class="chat-message">▶️ 🎬 2 media</div>
+          </div>
+        </div>
+        <div class="chat-item">
+          <div class="avatar bg-green">Z</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Zhansaya Tazhibayeva</div>
+              <div class="chat-time">Wed</div>
+            </div>
+            <div class="chat-message">
+              <span class="delivered-icon">✓✓</span>hw
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-pink">Test</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Тест Скролла 1</div>
+              <div class="chat-time">Tue</div>
+            </div>
+            <div class="chat-message">Ера молодец</div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-red">Scrol</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Тест Скролла 2</div>
+              <div class="chat-time">Mon</div>
+            </div>
+            <div class="chat-message">Ера умничка</div>
+          </div>
+          <div class="chat-status"><span class="unread-count">99</span></div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-orange">3</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Тест Скролла 3</div>
+              <div class="chat-time">10/10</div>
+            </div>
+            <div class="chat-message">Ера с норм самооценкой</div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-teal">4</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Тест Скролла 4</div>
+              <div class="chat-time">10/09</div>
+            </div>
+            <div class="chat-message">Ера великодушный</div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-blue">5</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Тест Скролла 5</div>
+              <div class="chat-time">10/08</div>
+            </div>
+            <div class="chat-message">Ера великолепный</div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-pink">6</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Тест Скролла 6</div>
+              <div class="chat-time">10/07</div>
+            </div>
+            <div class="chat-message">Ера красавчик</div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-green">7</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Тест Скролла 7</div>
+              <div class="chat-time">10/06</div>
+            </div>
+            <div class="chat-message">Ера потрясающий</div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-orange">8</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Тест Скролла 8</div>
+              <div class="chat-time">10/05</div>
+            </div>
+            <div class="chat-message">Ера замечательный</div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-red">9</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Тест Скролла 9</div>
+              <div class="chat-time">10/04</div>
+            </div>
+            <div class="chat-message">Ера добрый</div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-blue">10</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Тест Скролла 10</div>
+              <div class="chat-time">10/03</div>
+            </div>
+            <div class="chat-message">Ера гениальный</div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-pink">11</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Тест Скролла 11</div>
+              <div class="chat-time">10/02</div>
+            </div>
+            <div class="chat-message">Ера блестящий</div>
+          </div>
+        </div>
+
+        <div class="chat-item">
+          <div class="avatar bg-teal">12</div>
+          <div class="chat-content">
+            <div class="chat-header">
+              <div class="chat-name">Тест Скролла 12</div>
+              <div class="chat-time">10/01</div>
+            </div>
+            <div class="chat-message">Ера невероятный</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+        }
+        .left{
+            display: flex;
+            gap: 30px;
+        }
+        .zag{
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        .g{
+            border: 1px solid #ddd;
+            background-color:white; 
+            display:grid;
+            grid-template-columns: 60px repeat(10,1fr);
+            grid-auto-rows: minmax(80 px,auto);
+        }
+        .c{
+            padding: 8px;
+            border-right: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            font-size: 0.9em;
+            line-height: 1.2;
+            display:flex ;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .h{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold; 
+        }
+        .tc b{
+            font-size: 1.2em;
+        }
+        .dc{
+            background-color: #f9f9f9;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .dc span{
+            font-size: 0.8em;
+            font-weight: bolder;
+            color: #444;
+        }
+        .lc p{
+            margin: auto 0 0 0;
+            font-size: 0.8em;
+            color:#555;
+        }
+        .lc span{
+            position: absolute;
+            bottom: 3px;
+            right: 5px;
+            font-weight: bolder;
+            color: #999;
+            font-size: larger;
+        }
+        .dot {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 8px;
+        height: 8px;
+        background-color: red;
+        border-radius: 50%;
+      }
+      .s1 {
+        grid-column: span 1;
+      }
+      .s2 {
+        grid-column: span 2;
+      }
+      .s3 {
+        grid-column: span 3;
+      }
+      .s4 {
+        grid-column: span 4;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left">
+        <p>MY TIMETABLE</p>
+        <p>CLASSES</p>
+      </div>
+      <div class="right">
+        <p><< TODAY >></p>
+      </div>
+    </header>
+
+    <div>
+      <h1 class="zag">2F-4</h1>
+    </div>
+    <div class="g">
+      <div class="c tc"></div>
+      <div class="c tc s1"><b>1</b><span>8:30 am - 9:15 am</span></div>
+      <div class="c tc s1"><b>2</b><span>9:20 am - 10:05 am</span></div>
+      <div class="c tc s1"><b>3</b><span>10:20 am - 11:05 am</span></div>
+      <div class="c tc s1"><b>4</b><span>11:10 am - 11:55 am</span></div>
+      <div class="c tc s1"><b>5</b><span>12:00 pm - 12:45 pm</span></div>
+      <div class="c tc s1"><b>6</b><span>12:50 pm - 1:35 pm</span></div>
+      <div class="c tc s1"><b>7</b><span>1:40 pm - 2:25 pm</span></div>
+      <div class="c tc s1"><b>8</b><span>2:35 pm - 3:20 pm</span></div>
+      <div class="c tc s1"><b>9</b><span>3:25 pm - 4:10 pm</span></div>
+      <div class="c tc s1"><b>10</b><span>4:15 pm - 5:00 pm</span></div>
+
+      <div class="c dc">Mo<span>20/10</span></div>
+      <div class="c lc s2" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+      </div>
+      <div class="c lc s2" style="background: #fff9c4">
+        <div>Факультеттік ағылшын тілі</div>
+        <p>Қанатқызы Зейнеп</p>
+      </div>
+      <div class="c lc s1" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+      </div>
+      <div class="c lc s1" style="background: #e1bee7">
+        <div>КМ2. ОН 2.1-2.3.Math</div>
+        <p></p>
+        <span>sport hall</span>
+      </div>
+      <div class="c s1"></div>
+      <div class="c lc s3" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+        <span>B</span>
+      </div>
+
+      <div class="c dc">Mo<span>20/10</span></div>
+      <div class="c lc s2" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+      </div>
+      <div class="c lc s2" style="background: #fff9c4">
+        <div>Факультеттік ағылшын тілі</div>
+        <p>Қанатқызы Зейнеп</p>
+      </div>
+      <div class="c lc s1" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+      </div>
+      <div class="c lc s1" style="background: #e1bee7">
+        <div>КМ2. ОН 2.1-2.3.Math</div>
+        <p></p>
+        <span>sport hall</span>
+      </div>
+      <div class="c s1"></div>
+      <div class="c lc s3" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+        <span>B</span>
+      </div>
+
+      <div class="c dc">Mo<span>20/10</span></div>
+      <div class="c lc s2" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+      </div>
+      <div class="c lc s2" style="background: #fff9c4">
+        <div>Факультеттік ағылшын тілі</div>
+        <p>Қанатқызы Зейнеп</p>
+      </div>
+      <div class="c lc s1" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+      </div>
+      <div class="c lc s1" style="background: #e1bee7">
+        <div>КМ2. ОН 2.1-2.3.Math</div>
+        <p></p>
+        <span>sport hall</span>
+      </div>
+      <div class="c s1"></div>
+      <div class="c lc s3" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+        <span>B</span>
+      </div>
+
+      <div class="c dc">Mo<span>20/10</span></div>
+      <div class="c lc s2" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+      </div>
+      <div class="c lc s2" style="background: #fff9c4">
+        <div>Факультеттік ағылшын тілі</div>
+        <p>Қанатқызы Зейнеп</p>
+      </div>
+      <div class="c lc s1" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+      </div>
+      <div class="c lc s1" style="background: #e1bee7">
+        <div>КМ2. ОН 2.1-2.3.Math</div>
+        <p></p>
+        <span>sport hall</span>
+      </div>
+      <div class="c s1"></div>
+      <div class="c lc s3" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+        <span>B</span>
+      </div>
+
+      <div class="c dc">Mo<span>20/10</span></div>
+      <div class="c lc s2" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+      </div>
+      <div class="c lc s2" style="background: #fff9c4">
+        <div>Факультеттік ағылшын тілі</div>
+        <p>Қанатқызы Зейнеп</p>
+      </div>
+      <div class="c lc s1" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+      </div>
+      <div class="c lc s1" style="background: #e1bee7">
+        <div>КМ2. ОН 2.1-2.3.Math</div>
+        <p></p>
+        <span>sport hall</span>
+      </div>
+      <div class="c s1"></div>
+      <div class="c lc s3" style="background: #e0f7fa">
+        <div>КМ3.ОН 3.1-3.3. Web-бағдарламалау</div>
+        <p>Тажбаева Жансая</p>
+        <span>B</span>
+      </bodu>
+</html>

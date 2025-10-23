@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest Grid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .cont {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 15px 40px;
+            gap: 30px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            top: 0;
+            z-index: 1;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .item {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover {
+            transform: scale(1.03);
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .all {
+            width: 100px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .photo {
+            width: 40px;
+        }
+
+        .profile {
+            width: 35px;
+            border-radius: 100px;
+        }
+
+        input {
+            padding: 5px;
+            width: 780px;
+            height: 25px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+
+        .all2 {
+            display: flex;
+            gap: 0;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <header>
+            <input type="text" placeholder="Search"><img src="./profile.jpg" class="profile">
+        </header>
+        <div class="all2">
+            <div class="all">
+                <div class="footer">
+                    <img src="9055436_bxs_home_smile_icon.svg" class="photo">
+                    <img src="211817_search_strong_icon.svg" class="photo">
+                    <img src="172525_plus_icon.svg" class="photo">
+                    <img src="1276855_message_misc_icon.svg" class="photo">
+                    <img src="4092564_profile_about_mobile ui_user_icon.svg" class="photo">
+                </div>
+                <div class="footer2">
+                    <img src="./2849830_multimedia_options_setting_settings_gear_icon.svg" class="photo">
+                </div>
+            </div>
+            <main class="container">
+                <div class="item"><img src="image2.jpg" alt=""></div>
+                <div class="item"><img src="image2.jpg" alt=""></div>
+                <div class="item"><img src="image2.jpg" alt=""></div>
+                <div class="item"><img src="image2.jpg" alt=""></div>
+                <div class="item"><img src="image2.jpg" alt=""></div>
+                <div class="item"><img src="image2.jpg" alt=""></div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
+    
+</body>
+</html>
